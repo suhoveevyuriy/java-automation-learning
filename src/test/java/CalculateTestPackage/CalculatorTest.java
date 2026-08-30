@@ -1,3 +1,5 @@
+package CalculateTestPackage;
+
 import org.example.Calculator;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -32,8 +34,35 @@ public class CalculatorTest {
         };
     }
 
+    @Test(dataProvider = "sumData")
+    public void severalSumShouldReturnCorrectResult(int a, int b, int expected) {
+
+        int result = calculator.sum(a, b);
+
+        Assert.assertEquals(result, expected);
+    }
+
+    @DataProvider(name = "multiplyData")
+    public Object[][] multiplyData() {
+        return new Object[][]{
+                ///one with negative result for checking fail
+                {12, 2, 24},
+                {5, 3, 15},
+                {-2, 3, -6},
+                {0, 65, 0}
+        };
+    }
+
+    @Test(dataProvider = "multiplyData")
+    public void multiplyShouldReturnCorrectResult(int e, int g, int expected) {
+
+        int result = calculator.multiply(e, g);
+
+        Assert.assertEquals(result, expected);
+    }
+
     @Test (groups = {"smoke"})
-    public void sumNeedToBeCorrect(){
+    public void singleSumReturnCorrectResult(){
         System.out.println("Test 1 started...");
         int result = calculator.sum(6, 4);
         Assert.assertEquals(result,10);
@@ -50,11 +79,10 @@ public class CalculatorTest {
     @Test(groups = {"smoke"})
     public void subtractShouldReturnCorrectResult() {
 
-        int result = calculator.subtract(10, 3);
+        int result = calculator.subtract(13,5);
 
         Assert.assertEquals(result, 7);
     }
-
 
 
 

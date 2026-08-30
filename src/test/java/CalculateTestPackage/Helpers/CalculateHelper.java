@@ -1,4 +1,4 @@
-package Helpers;
+package CalculateTestPackage.Helpers;
 
 public class CalculateHelper {
 

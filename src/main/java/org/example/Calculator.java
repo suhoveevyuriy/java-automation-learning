@@ -8,12 +8,17 @@ public class Calculator {
     int b=6;
 
     public int subtract(int a, int b) {
-        return a - b;
+        return c - d;
     }
 
+    int c = 5;
+    int d= 9;
+
     public int multiply(int a, int b) {
-        return a * b;
+        return e * g;
     }
+    int e =3;
+    int g = 6;
 
     public int divide(int a, int b) {
         return a / b;
