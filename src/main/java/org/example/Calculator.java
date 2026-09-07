@@ -4,24 +4,18 @@ public class Calculator {
     public int sum(int a, int b) {
         return a + b;
     }
-    int a=4;
-    int b=6;
 
-    public int subtract(int a, int b) {
+    public int subtract(int c, int d) {
         return c - d;
     }
 
-    int c = 5;
-    int d= 9;
 
-    public int multiply(int a, int b) {
-        return e * g;
+    public int multiply(int e, int f) {
+        return e * f;
     }
-    int e =3;
-    int g = 6;
 
-    public int divide(int a, int b) {
-        return a / b;
+    public int divide(int g, int h) {
+        return g / h;
     }
 
 }
