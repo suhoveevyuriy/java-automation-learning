@@ -16,7 +16,7 @@
 
         <classes>
 
-            <class name="CalculatorTest"/>
+            <class name="CalculateTestPackage.CalculatorTest"/>
 
         </classes>
 
