@@ -47,7 +47,7 @@ public class CalculatorTest {
     public Object[][] multiplyData() {
         return new Object[][]{
                 ///one with negative result for checking fail
-                {12, 2, 24},
+                {12, 2, 25},
                 {5, 2, 10},
                 {-2, 3, -6},
                 {0, 65, 0}
@@ -84,7 +84,7 @@ public class CalculatorTest {
 
         int result = calculator.subtract(13,5);
 
-        Assert.assertEquals(result, 7);
+        Assert.assertEquals(result, 8);
     }
 
     @Test(groups = {"smoke"})
